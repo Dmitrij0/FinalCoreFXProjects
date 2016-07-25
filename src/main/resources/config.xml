@@ -15,4 +15,22 @@
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
         <uml>/dlenchuk/Fibonacci.jpg</uml>
     </Project>
+    <Project>
+        <name>Anagram</name>
+        <description>
+Поиск анаграмм.
+
+1. Реализовано в виде Reader.
+2. Принимает на вход поток символов.
+3. Результаты поиска сохраняются в Map&lt;String, Set&lt;String&gt;&gt;,
+   где ключом является строка упорядоченных символов слова по алфавиту,
+   а значением Set слов, удовлетворяющий набору символов в ключе
+4. Класс наследуется от абстрактного класса Reader, что позволяет его удобно использовать
+   в связке с любыми Input/Output Streams, а также имплементирует методы, позволяющие удобно
+   работать с результирующим множеством</description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.AnagramRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.io.anagram.MapAnagramReaderTest</tester>
+        <uml>/dlenchuk/Anagram.jpg</uml>
+    </Project>
 </Projects>
