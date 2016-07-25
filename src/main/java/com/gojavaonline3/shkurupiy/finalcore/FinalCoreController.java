@@ -12,8 +12,6 @@ public class FinalCoreController {
 
     @FXML
     private TableColumn<Project, String> projectNameColumn;
-    @FXML
-    private TableColumn<Project, String> authorNameColumn;
 
     private FinalCore finalCore;
 
@@ -23,7 +21,31 @@ public class FinalCoreController {
     @FXML
     private void initialize() {
         projectNameColumn.setCellValueFactory(cellData -> cellData.getValue().projectNameProperty());
-        authorNameColumn.setCellValueFactory(cellData -> cellData.getValue().authorNameProperty());
+
+        projectTableView.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showProject(newValue));
+    }
+
+    private void showProject(Project project) {
+        if (project != null) {
+            // Заполняем метки информацией из объекта person.
+//            firstNameLabel.setText(person.getFirstName());
+//            lastNameLabel.setText(person.getLastName());
+//            streetLabel.setText(person.getStreet());
+//            postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
+//            cityLabel.setText(person.getCity());
+//
+//            // TODO: Нам нужен способ для перевода дня рождения в тип String!
+//            // birthdayLabel.setText(...);
+//        } else {
+//            // Если Person = null, то убираем весь текст.
+//            firstNameLabel.setText("");
+//            lastNameLabel.setText("");
+//            streetLabel.setText("");
+//            postalCodeLabel.setText("");
+//            cityLabel.setText("");
+//            birthdayLabel.setText("");
+        }
     }
 
     public void setFinalCore(FinalCore finalCore) {

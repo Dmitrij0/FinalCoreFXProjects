@@ -1,5 +1,6 @@
 package com.gojavaonline3.shkurupiy.finalcore.model;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Project {
@@ -14,13 +15,13 @@ public class Project {
         this(null, null, null, null, null);
     }
 
-    public Project(StringProperty projectName, StringProperty description,
-                   StringProperty authorName, StringProperty runner, StringProperty tester) {
-        this.projectName = projectName;
-        this.description = description;
-        this.authorName = authorName;
-        this.runner = runner;
-        this.tester = tester;
+    public Project(String projectName, String description,
+                   String authorName, String runner, String tester) {
+        this.projectName = new SimpleStringProperty(projectName);
+        this.description = new SimpleStringProperty(description);
+        this.authorName = new SimpleStringProperty(authorName);
+        this.runner = new SimpleStringProperty(runner);
+        this.tester = new SimpleStringProperty(tester);
     }
 
     public String getProjectName() {
