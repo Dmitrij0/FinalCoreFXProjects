@@ -13,6 +13,7 @@ public class ProjectParser extends DefaultHandler {
     private final ObservableList<Project> projectsData;
     private Project currProject;
     private String currentTag = "";
+    private StringBuffer stringBuffer;
 
     public ProjectParser() {
         projectsData = FXCollections.observableArrayList();
@@ -34,6 +35,7 @@ public class ProjectParser extends DefaultHandler {
             currProject = new Project();
             projectsData.add(currProject);
         }
+        stringBuffer = new StringBuffer();
     }
 
     @Override
@@ -42,26 +44,26 @@ public class ProjectParser extends DefaultHandler {
         if(value.trim().isEmpty()){
             return;
         }
-        if("name".equals(currentTag)){
-            currProject.setProjectName(value);
-        }
-        if("description".equals(currentTag)){
-            currProject.setDescription(value);
-        }
-        if("author".equals(currentTag)){
-            currProject.setAuthorName(value);
-        }
-        if("runner".equals(currentTag)){
-            currProject.setRunner(value);
-        }
-        if("tester".equals(currentTag)){
-            currProject.setTester(value);
-        }
+        stringBuffer.append(value);
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        super.endElement(uri, localName, qName);
+        if("name".equals(currentTag)){
+            currProject.setProjectName(stringBuffer.toString());
+        }
+        if("description".equals(currentTag)){
+            currProject.setDescription(stringBuffer.toString());
+        }
+        if("author".equals(currentTag)){
+            currProject.setAuthorName(stringBuffer.toString());
+        }
+        if("runner".equals(currentTag)){
+            currProject.setRunner(stringBuffer.toString());
+        }
+        if("tester".equals(currentTag)){
+            currProject.setTester(stringBuffer.toString());
+        }
     }
 
     @Override

@@ -51,7 +51,7 @@ public class FinalCoreController {
 
     private void showProject(Project project) {
         if (project != null) {
-            descriptionArea.setText(project.getDescription().replaceFirst("^\\s*", ""));
+            descriptionArea.setText(project.getDescription());
         } else {
             descriptionArea.setText("");
         }
