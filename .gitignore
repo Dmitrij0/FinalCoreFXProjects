@@ -1,0 +1,10 @@
+#Folders
+out/*
+.idea/*
+target/*
+
+#Files
+*.class
+*.log
+*.iml
+*.txt

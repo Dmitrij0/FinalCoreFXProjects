@@ -1,0 +1,16 @@
+<Projects>
+    <Project>
+        <name>Factorial</name>
+        <description>Factorial algorithm</description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.FactorialRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
+    </Project>
+    <Project>
+        <name>Fibonacci</name>
+        <description>Fibonacci algorithm</description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.FibonacciRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
+    </Project>
+</Projects>
