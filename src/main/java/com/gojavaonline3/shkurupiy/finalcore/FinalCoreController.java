@@ -46,7 +46,7 @@ public class FinalCoreController {
         projectTableView.getSelectionModel()
                 .selectedItemProperty().addListener((observable, oldValue, newValue) -> showProject(newValue));
 
-        projectTableView.getSelectionModel().select(0);
+        projectTableView.getSelectionModel().focus(0);
     }
 
     private void showProject(Project project) {
