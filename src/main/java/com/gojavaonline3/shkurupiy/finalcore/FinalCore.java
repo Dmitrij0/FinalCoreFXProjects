@@ -25,7 +25,7 @@ public class FinalCore extends Application {
         loader.setLocation(getClass().getResource("/view/FinalCoreController.fxml"));
 
         Parent root = loader.load();
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("GoIT GoJava#3 Shkurupiy's Group Final Core Project");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
 
