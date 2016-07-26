@@ -31,11 +31,11 @@
             1. Реализовано в виде Reader.
             2. Принимает на вход поток символов.
             3. Результаты поиска сохраняются в Map&lt;String, Set&lt;String&gt;&gt;,
-            где ключом является строка упорядоченных символов слова по алфавиту,
-            а значением Set слов, удовлетворяющий набору символов в ключе
+               где ключом является строка упорядоченных символов слова по алфавиту,
+               а значением Set слов, удовлетворяющий набору символов в ключе
             4. Класс наследуется от абстрактного класса Reader, что позволяет его удобно использовать
-            в связке с любыми Input/Output Streams, а также имплементирует методы, позволяющие удобно
-            работать с результирующим множеством
+               в связке с любыми Input/Output Streams, а также имплементирует методы, позволяющие удобно
+               работать с результирующим множеством
         </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.AnagramRunner</runner>
@@ -43,17 +43,67 @@
         <uml>/dlenchuk/Anagram.jpg</uml>
     </Project>
     <Project>
-        <name>The calculator of the big numbers</name>
+        <name>Калькулятор больших чисел</name>
         <description>Калькулятор больших чисел.
             1. Калькулятор написан с использованием собственного класса BigInt.
             2. В калькуляторе реализованы операции сложения, вычитания, умножения и деления.
             3. Также калькулятор умеет вычислять произвольные арифметические выражения со скобками.
-            4. Так как числа с плавающей точкой реализованы не были, то при делении возможны
-            ошибки округления
+            4. Так как числа с плавающей точкой реализованы не были, то при делении возможны ошибки округления
         </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.CalculatorRunner</runner>
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator</tester>
         <uml>/dlenchuk/Calculator.jpg</uml>
+    </Project>
+    <Project>
+        <name>Простые числа</name>
+        <description>Алгоритм "Решето Эратосфена" для поиска простых чисел.
+            1. Алгоритм был написан в классическом варианте и с использованием оптимизации.
+            2. Было проведено сравнение. Оптимизированная реализация выигрывает в производительности почти в два раза у классической.
+            3. Основноая работа была проведена в абстрактном классе.
+            4. В реализации выведен только метод расчета.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.PrimesRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbersTest</tester>
+        <uml>/dlenchuk/PrimeNumbers.jpg</uml>
+    </Project>
+    <Project>
+        <name>LIFO, FIFO структуры</name>
+        <description>LIFO, FIFO структуры.
+            1. Описан общий интерфейс для LIFO, FIFO.
+            2. Основная функциональность реализована в абстактном классе AbstractQueue.
+            3. В конкретные реализации выведены только реализация методов добавления, удаления.
+            4. Реализована небольшая иерархия исключительных ситуаций.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.QueueRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.fifo_lifo</tester>
+        <uml>/dlenchuk/Queue.jpg</uml>
+    </Project>
+    <Project>
+        <name>Сортировка слиянием</name>
+        <description>Сортировка слиянием.
+            1. Сортировка реализована для упрощенного типизированного ArrayList&lt;T&gt;.
+            2. В том числе реализованы основные методы для работы со списком.
+            3. Класс представляет из себя обертку над массивом.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.MergeRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.mergesort.SimpleArrayListTest</tester>
+        <uml>/dlenchuk/Merge.jpg</uml>
+    </Project>
+    <Project>
+        <name>Обходы деревьев</name>
+        <description>Обходы деревьев (прямой, симметричный, обратный).
+            1. Обход реализован для собственного упрощенного TreeMap.
+            2. Дерево является сбалансированным и реализует алгоритм красно-черного дерева.
+            2. Интерфейс, реализованный данным деревом расширяет интерфейс Map.
+            3. Дерево также имплементирует интерфейс Traversal, что позволяет выполнить необходимые обходы.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.TreeRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.traversal.SimpleTreeMapTest</tester>
+        <uml>/dlenchuk/Traversal.jpg</uml>
     </Project>
 </Projects>

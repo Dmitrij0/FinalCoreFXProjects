@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author Dmitrij Lenchuk
  */
-public class PrimeNumbersListOptimized extends PrimeNumbersList{
+public class PrimeNumbersListOptimized extends AbstractPrimeNumbers{
 
     public PrimeNumbersListOptimized(int maxNumber) {
         super(maxNumber);

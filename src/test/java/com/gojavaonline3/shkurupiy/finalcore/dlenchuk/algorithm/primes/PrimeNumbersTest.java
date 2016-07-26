@@ -1,8 +1,5 @@
-package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.prime;
+package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes;
 
-import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbers;
-import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbersList;
-import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbersListOptimized;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -50,12 +47,12 @@ public class PrimeNumbersTest {
     public void prime() throws Exception {
         for (int i = 0; i < 100; i++) {
             assertEquals(
-                    "'" + (i + 1) + "' is " + (Arrays.binarySearch(ORIGINAL_DATA, i + 1) < 0 ? "not " : "") + "a prime",
+                    "'" + (i + 1) + "' is " + (Arrays.binarySearch(ORIGINAL_DATA, i + 1) < 0 ? "not " : "") + "a primes",
                     Arrays.binarySearch(ORIGINAL_DATA, i + 1) >= 0,
                     primes.prime(i + 1)
             );
             assertEquals(
-                    "'" + (i + 1) + "' is " + (Arrays.binarySearch(ORIGINAL_DATA, i + 1) < 0 ? "not " : "") + "a prime",
+                    "'" + (i + 1) + "' is " + (Arrays.binarySearch(ORIGINAL_DATA, i + 1) < 0 ? "not " : "") + "a primes",
                     Arrays.binarySearch(ORIGINAL_DATA, i + 1) >= 0,
                     primesOptimized.prime(i + 1)
             );

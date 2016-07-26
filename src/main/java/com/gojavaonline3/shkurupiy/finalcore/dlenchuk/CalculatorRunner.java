@@ -5,17 +5,12 @@ import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator.Calculato
 
 public class CalculatorRunner {
 
-    private static final String EXPRESSION = "((-3 + 2)*(2  +4)/(3-1) + (1 - 5))";
+    private static final String EXPRESSION = "((-3298347568923765 + 22349856238975834)*(22930845793847593475  +43984759384759)/(328934753987598347-1123123) + (123131 - 5123123))";
 
     public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
-        System.out.println(calculator.calculate(EXPRESSION));
-        System.out.println(calculator.getExpression());
-        System.out.println(calculator.getResult());
-        System.out.println(calculator);
-        System.out.println(new Calculator());
         System.out.println(new Calculator(EXPRESSION));
+
     }
 
 }

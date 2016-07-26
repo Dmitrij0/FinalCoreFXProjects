@@ -5,7 +5,7 @@ import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.Fibonacci;
 public class FibonacciRunner {
 
     public static void main(String[] args) {
-        Fibonacci fibonacci = new Fibonacci(250, true);
+        Fibonacci fibonacci = new Fibonacci(500, true);
 
         long timePoint = System.nanoTime();
         fibonacci.calculate();

@@ -11,7 +11,7 @@ public class PrimesRunner {
 
     private static final int HIGH_BOUND = 1_000;
 
-    private static final int STATISTICS_HIGH_BOUND = 100_000_000;
+    private static final int STATISTICS_HIGH_BOUND = 1_000_000;
     private static final int STATISTICS_COUNT_OF_ITERATIONS = 1_000;
 
     public static void main(String[] args)
@@ -32,8 +32,9 @@ public class PrimesRunner {
             throws IllegalAccessException, InvocationTargetException, InstantiationException {
         long totalTime = 0;
         System.out.println(classPrime.getSimpleName() + ": ");
-        AbstractPrimeNumbers prime = (AbstractPrimeNumbers) classPrime.getConstructors()[0].newInstance(STATISTICS_HIGH_BOUND);
+        AbstractPrimeNumbers prime;
         for (int i = 0; i < STATISTICS_COUNT_OF_ITERATIONS; i++) {
+            prime = (AbstractPrimeNumbers) classPrime.getConstructors()[0].newInstance(STATISTICS_HIGH_BOUND);
             totalTime += prime.getElapsedNanoTime();
             System.out.print("." + ((i + 1) % 100 == 0 ? '\n' : ""));
         }

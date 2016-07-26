@@ -102,7 +102,7 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternPlus.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("\\+");
-            return calculateSimpleExpression(matcher.replaceFirst(numbers.length == 3 ? "+" : "" +
+            return calculateSimpleExpression(matcher.replaceFirst(
                     add(numbers[numbers.length - 2], numbers[numbers.length - 1]).toString())
                     .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
@@ -113,8 +113,8 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternMinus.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("-");
-            return calculateSimpleExpression(matcher.replaceFirst(numbers.length == 3 ? "-" : "" +
-                    subtract(numbers[numbers.length - 2], numbers[numbers.length - 1]).toString())
+            return calculateSimpleExpression(matcher.replaceFirst(
+                    subtract((numbers.length == 3 ? "-" : "") + numbers[numbers.length - 2], numbers[numbers.length - 1]).toString())
                     .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
         return expression;

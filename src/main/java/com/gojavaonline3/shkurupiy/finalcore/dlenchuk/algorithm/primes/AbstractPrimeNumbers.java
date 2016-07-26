@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * The abstract class for prime numbers
+ * The abstract class for primes numbers
  * Only calculate() method needs to be implemented
  *
  * @author Dmitrij Lenchuk
