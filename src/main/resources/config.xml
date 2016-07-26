@@ -17,8 +17,7 @@
     </Project>
     <Project>
         <name>Anagram</name>
-        <description>
-Поиск анаграмм.
+        <description>Поиск анаграмм.
 
 1. Реализовано в виде Reader.
 2. Принимает на вход поток символов.
