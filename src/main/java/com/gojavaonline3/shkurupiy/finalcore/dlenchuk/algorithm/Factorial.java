@@ -1,6 +1,7 @@
 package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm;
 
-import java.math.BigInteger;
+import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator.BigInt;
+import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator.BigNumber;
 
 /**
  * The class calculates a factorial and save a result inside
@@ -12,7 +13,7 @@ public class Factorial {
     public static final int MAX_NUMBER_OF_FACTORIAL_ARGUMENT = 1000;
 
     private int argument;
-    private BigInteger factorial;
+    private BigNumber factorial;
     private boolean calculated;
 
     public Factorial(int argument) {
@@ -32,7 +33,7 @@ public class Factorial {
         factorial = null;
     }
 
-    public BigInteger getFactorial() {
+    public BigNumber getFactorial() {
         return factorial;
     }
 
@@ -40,7 +41,7 @@ public class Factorial {
         return calculated;
     }
 
-    public BigInteger calculate() {
+    public BigNumber calculate() {
         if (calculated) {
             return factorial;
         }
@@ -51,13 +52,13 @@ public class Factorial {
             throw new IllegalArgumentException("Argument of calculate function must be less or equals " +
                     MAX_NUMBER_OF_FACTORIAL_ARGUMENT);
         }
-        factorial = fact(BigInteger.valueOf(argument));
+        factorial = fact(new BigInt(String.valueOf(argument)));
         calculated = true;
         return factorial;
     }
 
-    private BigInteger fact(BigInteger number) {
-        return number.equals(BigInteger.ONE) ? number : number.multiply(fact(number.subtract(BigInteger.ONE)));
+    private BigNumber fact(BigNumber number) {
+        return number.equals(new BigInt("1")) ? number : number.multiply(fact(number.subtract(new BigInt("1"))));
     }
 
     @Override

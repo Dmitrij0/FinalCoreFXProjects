@@ -1,35 +1,59 @@
 <Projects>
     <Project>
-        <name>Factorial</name>
-        <description>Factorial algorithm</description>
+        <name>Факториал</name>
+        <description>Вычисление факториала
+            1. Оформлено в виде отдельного класса.
+            2. Аргумент и результат хранится в приватных полях класса.
+            3. Доступ предоставляется через публичные методы.
+            4. Используется собственный класс безразмерных больших чисел BigInt
+        </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.FactorialRunner</runner>
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
         <uml>/dlenchuk/Factorial.jpg</uml>
     </Project>
     <Project>
-        <name>Fibonacci</name>
-        <description>Fibonacci algorithm</description>
+        <name>Числа Фибоначи</name>
+        <description>Числа Фибоначи.
+            1. Оформлено в виде отдельного класса.
+            2. Количество запрошенных членов ряда и результат расчета хранятся в приватных полях класса.
+            3. Доступ предоставляется через публичные методы.
+            4. Используется собственный класс безразмерных больших чисел BigInt
+        </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.FibonacciRunner</runner>
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
         <uml>/dlenchuk/Fibonacci.jpg</uml>
     </Project>
     <Project>
-        <name>Anagram</name>
+        <name>Анаграммы</name>
         <description>Поиск анаграмм.
-
-1. Реализовано в виде Reader.
-2. Принимает на вход поток символов.
-3. Результаты поиска сохраняются в Map&lt;String, Set&lt;String&gt;&gt;,
-   где ключом является строка упорядоченных символов слова по алфавиту,
-   а значением Set слов, удовлетворяющий набору символов в ключе
-4. Класс наследуется от абстрактного класса Reader, что позволяет его удобно использовать
-   в связке с любыми Input/Output Streams, а также имплементирует методы, позволяющие удобно
-   работать с результирующим множеством</description>
+            1. Реализовано в виде Reader.
+            2. Принимает на вход поток символов.
+            3. Результаты поиска сохраняются в Map&lt;String, Set&lt;String&gt;&gt;,
+            где ключом является строка упорядоченных символов слова по алфавиту,
+            а значением Set слов, удовлетворяющий набору символов в ключе
+            4. Класс наследуется от абстрактного класса Reader, что позволяет его удобно использовать
+            в связке с любыми Input/Output Streams, а также имплементирует методы, позволяющие удобно
+            работать с результирующим множеством
+        </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.AnagramRunner</runner>
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.io.anagram.MapAnagramReaderTest</tester>
         <uml>/dlenchuk/Anagram.jpg</uml>
+    </Project>
+    <Project>
+        <name>The calculator of the big numbers</name>
+        <description>Калькулятор больших чисел.
+            1. Калькулятор написан с использованием собственного класса BigInt.
+            2. В калькуляторе реализованы операции сложения, вычитания, умножения и деления.
+            3. Также калькулятор умеет вычислять произвольные арифметические выражения со скобками.
+            4. Так как числа с плавающей точкой реализованы не были, то при делении возможны
+            ошибки округления
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.CalculatorRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator</tester>
+        <uml>/dlenchuk/Calculator.jpg</uml>
     </Project>
 </Projects>

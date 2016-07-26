@@ -1,5 +1,6 @@
 package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -81,7 +82,8 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternMultiply.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("\\*");
-            return calculateSimpleExpression(matcher.replaceFirst(multiply(numbers[0], numbers[1]).toString()));
+            return calculateSimpleExpression(matcher.replaceFirst(multiply(numbers[0], numbers[1]).toString())
+                    .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
         return expression;
     }
@@ -90,7 +92,8 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternDivide.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("/");
-            return calculateSimpleExpression(matcher.replaceFirst(divide(numbers[0], numbers[1]).toString()));
+            return calculateSimpleExpression(matcher.replaceFirst(divide(numbers[0], numbers[1]).toString())
+                    .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
         return expression;
     }
@@ -99,7 +102,9 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternPlus.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("\\+");
-            return calculateSimpleExpression(matcher.replaceFirst(add(numbers[0], numbers[1]).toString()));
+            return calculateSimpleExpression(matcher.replaceFirst(numbers.length == 3 ? "+" : "" +
+                    add(numbers[numbers.length - 2], numbers[numbers.length - 1]).toString())
+                    .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
         return expression;
     }
@@ -108,7 +113,9 @@ public class Calculator implements Evaluator {
         Matcher matcher = patternMinus.matcher(expression);
         if (matcher.find()) {
             String[] numbers = matcher.group().split("-");
-            return calculateSimpleExpression(matcher.replaceFirst(subtract(numbers[0], numbers[1]).toString()));
+            return calculateSimpleExpression(matcher.replaceFirst(numbers.length == 3 ? "-" : "" +
+                    subtract(numbers[numbers.length - 2], numbers[numbers.length - 1]).toString())
+                    .replaceAll("(\\+\\+|--)", "+").replaceAll("(\\+-|-\\+)", "-"));
         }
         return expression;
     }
