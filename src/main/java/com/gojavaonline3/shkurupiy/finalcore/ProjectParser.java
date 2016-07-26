@@ -1,7 +1,6 @@
 package com.gojavaonline3.shkurupiy.finalcore;
 
 import com.gojavaonline3.shkurupiy.finalcore.model.Project;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.xml.sax.Attributes;
@@ -63,6 +62,9 @@ public class ProjectParser extends DefaultHandler {
         }
         if("tester".equals(currentTag)){
             currProject.setTester(stringBuffer.toString());
+        }
+        if("uml".equals(currentTag)){
+            currProject.setUml(stringBuffer.toString());
         }
     }
 

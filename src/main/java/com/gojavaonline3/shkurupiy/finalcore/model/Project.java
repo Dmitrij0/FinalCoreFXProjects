@@ -10,18 +10,20 @@ public class Project {
     private StringProperty authorName;
     private StringProperty runner;
     private StringProperty tester;
+    private StringProperty uml;
 
     public Project() {
-        this(null, null, null, null, null);
+        this(null, null, null, null, null, null);
     }
 
-    public Project(String projectName, String description,
-                   String authorName, String runner, String tester) {
+    public Project(String projectName, String description, String authorName,
+                   String runner, String tester, String uml) {
         this.projectName = new SimpleStringProperty(projectName);
         this.description = new SimpleStringProperty(description);
         this.authorName = new SimpleStringProperty(authorName);
         this.runner = new SimpleStringProperty(runner);
         this.tester = new SimpleStringProperty(tester);
+        this.uml = new SimpleStringProperty(uml);
     }
 
     public String getProjectName() {
@@ -83,4 +85,17 @@ public class Project {
     public void setTester(String tester) {
         this.tester.set(tester);
     }
+
+    public String getUml() {
+        return uml.get();
+    }
+
+    public StringProperty umlProperty() {
+        return uml;
+    }
+
+    public void setUml(String uml) {
+        this.uml.set(uml);
+    }
+
 }
