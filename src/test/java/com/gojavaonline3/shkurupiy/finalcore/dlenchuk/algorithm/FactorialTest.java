@@ -1,5 +1,6 @@
 package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm;
 
+import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator.BigInt;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class FactorialTest {
 
     private static final int ARGUMENT_OF_FACTORIAL = 10;
     private static final int ARGUMENT_OF_FACTORIAL_SET = 5;
-    private static final BigInteger FACTORIAL = BigInteger.valueOf(3628800);
+    private static final BigInt FACTORIAL = new BigInt("3628800");
 
     @Before
     public void setUp() throws Exception {

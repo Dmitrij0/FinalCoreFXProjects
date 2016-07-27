@@ -22,7 +22,7 @@
         </description>
         <author>Shkurupiy Group</author>
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.FibonacciRunner</runner>
-        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FactorialTest</tester>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.FibonacciTest</tester>
         <uml>/dlenchuk/Fibonacci.jpg</uml>
     </Project>
     <Project>

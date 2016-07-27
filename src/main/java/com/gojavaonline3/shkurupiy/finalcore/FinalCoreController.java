@@ -9,6 +9,9 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import junit.framework.TestCase;
+import junit.framework.TestResult;
+import junit.framework.TestSuite;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -89,10 +92,13 @@ public class FinalCoreController implements Initializable {
         } else if (tab == runnerTab) {
             prepareAndExecuteProject(runArea, projectTableView.getSelectionModel().getSelectedItem().getRunner());
         } else if (tab == testerTab) {
-            prepareAndExecuteProject(testArea, projectTableView.getSelectionModel().getSelectedItem().getTester());
+            prepareAndExecuteTest(testArea, projectTableView.getSelectionModel().getSelectedItem().getTester());
         }
     }
 
+    private void prepareAndExecuteTest(TextArea textArea, String fullClassName) {
+        textArea.setText(fullClassName + " is covered by tests.");
+    }
 
     private void prepareAndExecuteProject(TextArea textArea, String fullClassName) {
         InputStream oldIn = System.in;

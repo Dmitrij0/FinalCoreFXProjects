@@ -1,5 +1,6 @@
 package com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm;
 
+import com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator.BigInt;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,9 +17,9 @@ public class FibonacciTest {
 
     private int count;
     private boolean leadZero;
-    private Long[] expected;
+    private BigInt[] expected;
 
-    public FibonacciTest(int count, boolean leadZero, Long[] expected) {
+    public FibonacciTest(int count, boolean leadZero, BigInt[] expected) {
         this.count = count;
         this.leadZero = leadZero;
         this.expected = expected;
@@ -27,11 +28,11 @@ public class FibonacciTest {
     @Parameterized.Parameters(name = "{index}: F({0}, {1}) {2}")
     public static Iterable<Object[]> testDataStock() {
         return Arrays.asList(new Object[][]{
-                {1, true, new Long[]{0L}},
-                {1, false, new Long[]{1L}},
-                {5, true, new Long[]{0L, 1L, 1L, 2L, 3L}},
-                {5, false, new Long[]{1L, 1L, 2L, 3L, 5L}}
-                });
+                {1, true, new BigInt[]{new BigInt("0")}},
+                {1, false, new BigInt[]{new BigInt("1")}},
+                {5, true, new BigInt[]{new BigInt("0"), new BigInt("1"), new BigInt("1"), new BigInt("2"), new BigInt("3")}},
+                {5, false, new BigInt[]{new BigInt("1"), new BigInt("1"), new BigInt("2"), new BigInt("3"), new BigInt("5")}}
+        });
     }
 
     @Before
