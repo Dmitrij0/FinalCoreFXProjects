@@ -21,7 +21,7 @@ public class DecimalBinaryNumberConverter implements DecimalBinaryNumber {
             return "0";
         }
 
-        StringBuffer res = new StringBuffer();
+        StringBuilder res = new StringBuilder();
         int currentValue = this.value;
         while (currentValue > 0) {
             res.append(currentValue % 2);
@@ -45,7 +45,7 @@ public class DecimalBinaryNumberConverter implements DecimalBinaryNumber {
         if (strValue.isEmpty()) {
             throw new IllegalArgumentException();
         }
-        int value = 0;
+        int value;
 
         try {
             value = Integer.parseInt(strValue);

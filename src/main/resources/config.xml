@@ -1,5 +1,40 @@
 <Projects>
     <Project>
+        <name>Решето Эратосфена</name>
+        <description>Алгоритм "Решето Эратосфена" для поиска простых чисел.
+            1. Алгоритм был написан в классическом варианте и с использованием оптимизации.
+            2. Было проведено сравнение. Оптимизированная реализация выигрывает в производительности почти в два раза у классической.
+            3. Основноая работа была проведена в абстрактном классе.
+            4. В реализации выведен только метод расчета.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.PrimesRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbersTest</tester>
+        <uml>/dlenchuk/PrimeNumbers.jpg</uml>
+    </Project>
+    <Project>
+        <name>Перевод чисел в двоичную систему и обратно</name>
+        <description>Программа в качесте аргументов принимает числа в виде десятичных и бинарных литералов, по зпросу может вывести число в нужной системе счисления.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.bobko.PresentationDecimalBinaryRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.bobko.DecimalBinaryNumberTest</tester>
+        <uml>/bobko/DecimalBinaryUML.png</uml>
+    </Project>
+    <Project>
+        <name>Калькулятор больших чисел</name>
+        <description>Калькулятор больших чисел.
+            1. Калькулятор написан с использованием собственного класса BigInt.
+            2. В калькуляторе реализованы операции сложения, вычитания, умножения и деления.
+            3. Также калькулятор умеет вычислять произвольные арифметические выражения со скобками.
+            4. Так как числа с плавающей точкой реализованы не были, то при делении возможны ошибки округления
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.CalculatorRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator</tester>
+        <uml>/dlenchuk/Calculator.jpg</uml>
+    </Project>
+    <Project>
         <name>Факториал</name>
         <description>Вычисление факториала
             1. Оформлено в виде отдельного класса.
@@ -43,32 +78,6 @@
         <uml>/dlenchuk/Anagram.jpg</uml>
     </Project>
     <Project>
-        <name>Калькулятор больших чисел</name>
-        <description>Калькулятор больших чисел.
-            1. Калькулятор написан с использованием собственного класса BigInt.
-            2. В калькуляторе реализованы операции сложения, вычитания, умножения и деления.
-            3. Также калькулятор умеет вычислять произвольные арифметические выражения со скобками.
-            4. Так как числа с плавающей точкой реализованы не были, то при делении возможны ошибки округления
-        </description>
-        <author>Shkurupiy Group</author>
-        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.CalculatorRunner</runner>
-        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.tools.calculator</tester>
-        <uml>/dlenchuk/Calculator.jpg</uml>
-    </Project>
-    <Project>
-        <name>Простые числа</name>
-        <description>Алгоритм "Решето Эратосфена" для поиска простых чисел.
-            1. Алгоритм был написан в классическом варианте и с использованием оптимизации.
-            2. Было проведено сравнение. Оптимизированная реализация выигрывает в производительности почти в два раза у классической.
-            3. Основноая работа была проведена в абстрактном классе.
-            4. В реализации выведен только метод расчета.
-        </description>
-        <author>Shkurupiy Group</author>
-        <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.PrimesRunner</runner>
-        <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.algorithm.primes.PrimeNumbersTest</tester>
-        <uml>/dlenchuk/PrimeNumbers.jpg</uml>
-    </Project>
-    <Project>
         <name>LIFO, FIFO структуры</name>
         <description>LIFO, FIFO структуры.
             1. Описан общий интерфейс для LIFO, FIFO.
@@ -105,14 +114,5 @@
         <runner>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.TreeRunner</runner>
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.traversal.SimpleTreeMapTest</tester>
         <uml>/dlenchuk/Traversal.jpg</uml>
-    </Project>
-    <Project>
-        <name>Перевод чисел в двоичную систему и обратно</name>
-        <description>Программа в качесте аргументов принимает числа в виде десятичных и бинарных литералов, по зпросу может вывести число в нужной системе счисления.
-        </description>
-        <author>Shkurupiy Group</author>
-        <runner>com.gojavaonline3.shkurupiy.finalcore.bobko.PresentationDecimalBinaryRunner</runner>
-        <tester>com.gojavaonline3.shkurupiy.finalcore.bobko.DecimalBinaryNumberTest</tester>
-        <uml>/bobko/DecimalBinaryUML.png</uml>
     </Project>
 </Projects>

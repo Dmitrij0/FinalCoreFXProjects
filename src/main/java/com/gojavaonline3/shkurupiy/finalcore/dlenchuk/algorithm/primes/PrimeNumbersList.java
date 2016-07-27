@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class PrimeNumbersList extends AbstractPrimeNumbers {
 
-    public PrimeNumbersList(int maxNumber) {
-        super(maxNumber);
+    public PrimeNumbersList(int highBound) {
+        super(highBound);
     }
 
     List<Integer> calculate() {

@@ -11,8 +11,8 @@ public class PrimesRunner {
 
     private static final int HIGH_BOUND = 1_000;
 
-    private static final int STATISTICS_HIGH_BOUND = 1_000_000;
-    private static final int STATISTICS_COUNT_OF_ITERATIONS = 1_000;
+    private static final int STATISTICS_HIGH_BOUND = 100_000;
+    private static final int STATISTICS_COUNT_OF_ITERATIONS = 100;
 
     public static void main(String[] args)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {

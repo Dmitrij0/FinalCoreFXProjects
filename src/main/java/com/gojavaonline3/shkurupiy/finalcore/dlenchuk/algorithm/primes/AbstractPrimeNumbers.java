@@ -64,7 +64,7 @@ public abstract class AbstractPrimeNumbers implements PrimeNumbers {
         long counter = 0;
         for (Integer prime : primes) {
             counter++;
-            result += String.format("|%10d" + (counter % 10 == 0 ? "|\n" : ""), prime);
+            result += String.format("|%5d" + (counter % 10 == 0 ? "|\n" : ""), prime);
         }
         return result;
     }

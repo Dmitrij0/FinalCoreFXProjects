@@ -26,7 +26,7 @@ public class FinalCore extends Application {
 
         Parent root = loader.load();
         primaryStage.setTitle("GoIT GoJava#3 Shkurupiy's Group Final Core Project");
-        primaryStage.setScene(new Scene(root, 1280, 720));
+        primaryStage.setScene(new Scene(root, 1042, 761));
         primaryStage.show();
 
         FinalCoreController controller = loader.getController();

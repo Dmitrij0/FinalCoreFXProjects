@@ -91,7 +91,7 @@ public class PrimeNumbersTest {
         long counter = 0;
         for (Integer prime : ORIGINAL_DATA) {
             counter++;
-            result += String.format("|%10d" + (counter % 10 == 0 ? "|\n" : ""), prime);
+            result += String.format("|%5d" + (counter % 10 == 0 ? "|\n" : ""), prime);
         }
         assertEquals(result, primes.toString());
         assertEquals(result, primesOptimized.toString());
