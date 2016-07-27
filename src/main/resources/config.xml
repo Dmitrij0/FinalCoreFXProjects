@@ -106,4 +106,13 @@
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.traversal.SimpleTreeMapTest</tester>
         <uml>/dlenchuk/Traversal.jpg</uml>
     </Project>
+    <Project>
+        <name>Перевод чисел в двоичную систему и обратно</name>
+        <description>Программа в качесте аргументов принимает числа в виде десятичных и бинарных литералов, по зпросу может вывести число в нужной системе счисления.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.bobko.PresentationDecimalBinaryRunner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.bobko.DecimalBinaryNumberTest</tester>
+        <uml>/bobko/DecimalBinaryUML.png</uml>
+    </Project>
 </Projects>
