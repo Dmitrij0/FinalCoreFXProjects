@@ -115,4 +115,14 @@
         <tester>com.gojavaonline3.shkurupiy.finalcore.dlenchuk.collections.traversal.SimpleTreeMapTest</tester>
         <uml>/dlenchuk/Traversal.jpg</uml>
     </Project>
+    <Project>
+        <name>ex.ua Downloader</name>
+        <description>Загрузчик файлов с сайта ex.ua
+            Для указанного URL скачивает все файлы с заданным расширением в определенную папку.
+        </description>
+        <author>Shkurupiy Group</author>
+        <runner>com.gojavaonline3.shkurupiy.finalcore.ljubarets.Runner</runner>
+        <tester>com.gojavaonline3.shkurupiy.finalcore.ljubarets.EXUADownloader</tester>
+        <uml>/ljubarets/Downloader.jpg</uml>
+    </Project>
 </Projects>
