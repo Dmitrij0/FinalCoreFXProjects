@@ -17,6 +17,9 @@ public abstract class AbstractPrimeNumbers implements PrimeNumbers {
     private final long elapsedNanoTime;
 
     AbstractPrimeNumbers(int highBound) {
+        if (highBound < 3) {
+            throw new IllegalArgumentException("The high bound parameter must be more then '3'");
+        }
         this.highBound = highBound;
         long time = System.nanoTime();
         primes = calculate();
