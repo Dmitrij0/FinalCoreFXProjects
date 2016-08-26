@@ -162,6 +162,6 @@ public class Calculator implements Evaluator {
                 expression
                         .replaceAll("\\+", " + ")
                         .replaceAll("-", " - ") +
-                        (expression.matches(".*/.*") ? " ~ " : " = ") + result;
+                        (expression.matches(".*/.*") ? " ~ " : " = ") + result.toString().replaceAll("^\\+\\s*", "");
     }
 }
